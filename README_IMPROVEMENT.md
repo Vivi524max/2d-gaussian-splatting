@@ -49,3 +49,28 @@ The final method-level improvement will modify the original 2DGS optimization pr
 ## AI Usage Statement
 
 AI tools were used for environment setup guidance, debugging assistance, command organization, and report writing support. All code changes and experimental results were checked and executed by the author.
+
+
+## Reproduction Commands
+
+Baseline scan24: bash scripts/run_baseline_scan24.sh 2>&1 | tee logs/baseline_scan24_15000.log
+
+Baseline scan105: bash scripts/run_baseline_scan105.sh 2>&1 | tee logs/baseline_scan105_15000.log
+
+Render baseline: bash scripts/render_baseline.sh 2>&1 | tee logs/render_baseline.log
+
+Evaluate baseline: bash scripts/eval_baseline.sh 2>&1 | tee logs/eval_baseline.log
+
+## Improvement Commands
+
+Improvement scan24: bash scripts/run_improvement_scan24.sh 2>&1 | tee logs/improvement_scan24_15000.log
+
+Improvement scan105: bash scripts/run_improvement_scan105.sh 2>&1 | tee logs/improvement_scan105_15000.log
+
+## Logs and Results
+
+Environment log: logs/env_info.txt
+
+Baseline logs: logs/baseline_scan24_15000.log and logs/baseline_scan105_15000.log
+
+Rendered PNG results and raw metrics for the final ZIP package will be stored under results/.

@@ -1,0 +1,3 @@
+scene,psnr,ssim,lpips,training_time,peak_vram,render_fps
+scan24,,,,,,
+scan105,,,,,,
