@@ -18,15 +18,15 @@ The experiments use DTU scan24 and DTU scan105.
 
 ## Baseline Commands
 
-Train scan24 baseline: bash scripts/run_baseline_scan24.sh 2>&1 | tee logs/baseline_scan24_15000.log
+Train scan24 baseline: bash scripts/run_baseline_scan24.sh 2>&1 | tee logs/baseline_scan24_10000.log
 
-Train scan105 baseline: bash scripts/run_baseline_scan105.sh 2>&1 | tee logs/baseline_scan105_15000.log
+Train scan105 baseline: bash scripts/run_baseline_scan105.sh 2>&1 | tee logs/baseline_scan105_10000.log
 
 ## Improvement Commands
 
-Train scan24 improvement: bash scripts/run_improvement_scan24.sh 2>&1 | tee logs/improvement_scan24_15000.log
+Train scan24 improvement: bash scripts/run_improvement_scan24.sh 2>&1 | tee logs/improvement_scan24_10000.log
 
-Train scan105 improvement: bash scripts/run_improvement_scan105.sh 2>&1 | tee logs/improvement_scan105_15000.log
+Train scan105 improvement: bash scripts/run_improvement_scan105.sh 2>&1 | tee logs/improvement_scan105_10000.log
 
 ## Logs
 
@@ -53,9 +53,9 @@ AI tools were used for environment setup guidance, debugging assistance, command
 
 ## Reproduction Commands
 
-Baseline scan24: bash scripts/run_baseline_scan24.sh 2>&1 | tee logs/baseline_scan24_15000.log
+Baseline scan24: bash scripts/run_baseline_scan24.sh 2>&1 | tee logs/baseline_scan24_10000.log
 
-Baseline scan105: bash scripts/run_baseline_scan105.sh 2>&1 | tee logs/baseline_scan105_15000.log
+Baseline scan105: bash scripts/run_baseline_scan105.sh 2>&1 | tee logs/baseline_scan105_10000.log
 
 Render baseline: bash scripts/render_baseline.sh 2>&1 | tee logs/render_baseline.log
 
@@ -63,14 +63,19 @@ Evaluate baseline: bash scripts/eval_baseline.sh 2>&1 | tee logs/eval_baseline.l
 
 ## Improvement Commands
 
-Improvement scan24: bash scripts/run_improvement_scan24.sh 2>&1 | tee logs/improvement_scan24_15000.log
+Improvement scan24: bash scripts/run_improvement_scan24.sh 2>&1 | tee logs/improvement_scan24_10000.log
 
-Improvement scan105: bash scripts/run_improvement_scan105.sh 2>&1 | tee logs/improvement_scan105_15000.log
+Improvement scan105: bash scripts/run_improvement_scan105.sh 2>&1 | tee logs/improvement_scan105_10000.log
 
 ## Logs and Results
 
 Environment log: logs/env_info.txt
 
-Baseline logs: logs/baseline_scan24_15000.log and logs/baseline_scan105_15000.log
+Baseline logs: logs/baseline_scan24_10000.log and logs/baseline_scan105_10000.log
 
 Rendered PNG results and raw metrics for the final ZIP package will be stored under results/.
+
+
+## Baseline Iteration Setting
+
+For the one-day course experiment schedule, baseline reproduction uses 10000 iterations with saved checkpoints at 3000, 5000, 8000, and 10000 iterations. The same setting will be used for the improved version to ensure fair comparison.
