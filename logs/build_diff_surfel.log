@@ -1,0 +1,468 @@
+Using pip 24.2 from /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/pip (python 3.8)
+Looking in indexes: http://172.16.2.230:8501/simple/
+Obtaining file:///home/easyai/2dgs-final/submodules/diff-surfel-rasterization
+  Preparing metadata (setup.py): started
+  Running command python setup.py egg_info
+  running egg_info
+  creating /tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info
+  writing /tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info/PKG-INFO
+  writing dependency_links to /tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info/dependency_links.txt
+  writing top-level names to /tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info/top_level.txt
+  writing manifest file '/tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info/SOURCES.txt'
+  reading manifest file '/tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info/SOURCES.txt'
+  adding license file 'LICENSE.md'
+  writing manifest file '/tmp/pip-pip-egg-info-9puil_q_/diff_surfel_rasterization.egg-info/SOURCES.txt'
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: diff_surfel_rasterization
+  DEPRECATION: Legacy editable install of diff_surfel_rasterization==0.0.1 from file:///home/easyai/2dgs-final/submodules/diff-surfel-rasterization (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for diff_surfel_rasterization
+    Running command python setup.py develop
+    running develop
+    running egg_info
+    creating diff_surfel_rasterization.egg-info
+    writing diff_surfel_rasterization.egg-info/PKG-INFO
+    writing dependency_links to diff_surfel_rasterization.egg-info/dependency_links.txt
+    writing top-level names to diff_surfel_rasterization.egg-info/top_level.txt
+    writing manifest file 'diff_surfel_rasterization.egg-info/SOURCES.txt'
+    reading manifest file 'diff_surfel_rasterization.egg-info/SOURCES.txt'
+    adding license file 'LICENSE.md'
+    writing manifest file 'diff_surfel_rasterization.egg-info/SOURCES.txt'
+    running build_ext
+    building 'diff_surfel_rasterization._C' extension
+    creating /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+    !!
+
+            ********************************************************************************
+            Please avoid running ``setup.py`` and ``easy_install``.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+
+            See https://github.com/pypa/setuptools/issues/917 for details.
+            ********************************************************************************
+
+    !!
+      easy_install.initialize_options(self)
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+    !!
+
+            ********************************************************************************
+            Please avoid running ``setup.py`` directly.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+
+            See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+            ********************************************************************************
+
+    !!
+      self.initialize_options()
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/utils/cpp_extension.py:398: UserWarning: There are no /usr/bin/g++-9 version bounds defined for CUDA version 11.8
+      warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+    Emitting ninja build file /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/build.ninja...
+    Compiling objects...
+    Using envvar MAX_JOBS (4) as the number of workers...
+    [1/5] /opt/anaconda3/envs/surfel_splatting/bin/nvcc  -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/TH -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/THC -I/opt/anaconda3/envs/surfel_splatting/include -I/opt/anaconda3/envs/surfel_splatting/include/python3.8 -c -c /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/forward.cu -o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/easyai/2dgs-final/submodules/diff-surfel-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=sm_86 -ccbin /usr/bin/gcc-9 -std=c++17
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/auxiliary.h(197): warning #177-D: variable "p_proj" was declared but never referenced
+
+    [2/5] /opt/anaconda3/envs/surfel_splatting/bin/nvcc  -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/TH -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/THC -I/opt/anaconda3/envs/surfel_splatting/include -I/opt/anaconda3/envs/surfel_splatting/include/python3.8 -c -c /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/backward.cu -o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/backward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/easyai/2dgs-final/submodules/diff-surfel-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=sm_86 -ccbin /usr/bin/gcc-9 -std=c++17
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/auxiliary.h(197): warning #177-D: variable "p_proj" was declared but never referenced
+
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/backward.cu(321): warning #177-D: variable "w" was declared but never referenced
+
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/backward.cu(212): warning #177-D: variable "dL_dmax_dweight" was declared but never referenced
+
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/backward.cu(248): warning #177-D: variable "ddelx_dx" was declared but never referenced
+
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/backward.cu(249): warning #177-D: variable "ddely_dy" was declared but never referenced
+
+    [3/5] /opt/anaconda3/envs/surfel_splatting/bin/nvcc  -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/TH -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/THC -I/opt/anaconda3/envs/surfel_splatting/include -I/opt/anaconda3/envs/surfel_splatting/include/python3.8 -c -c /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/easyai/2dgs-final/submodules/diff-surfel-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=sm_86 -ccbin /usr/bin/gcc-9 -std=c++17
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/cuda_rasterizer/auxiliary.h(197): warning #177-D: variable "p_proj" was declared but never referenced
+
+    [4/5] /usr/bin/g++-9 -MMD -MF /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/ext.o.d -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/TH -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/THC -I/opt/anaconda3/envs/surfel_splatting/include -I/opt/anaconda3/envs/surfel_splatting/include/python3.8 -c -c /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/ext.cpp -o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+    cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+    [5/5] /opt/anaconda3/envs/surfel_splatting/bin/nvcc  -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/TH -I/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/THC -I/opt/anaconda3/envs/surfel_splatting/include -I/opt/anaconda3/envs/surfel_splatting/include/python3.8 -c -c /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu -o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/home/easyai/2dgs-final/submodules/diff-surfel-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=sm_86 -ccbin /usr/bin/gcc-9 -std=c++17
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/c10/util/irange.h(54): warning #186-D: pointless comparison of unsigned integer with zero
+              detected during:
+                instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+    (61): here
+                instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=size_t, one_sided=false, <unnamed>=0]"
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/c10/core/TensorImpl.h(77): here
+
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/c10/util/irange.h(54): warning #186-D: pointless comparison of unsigned integer with zero
+              detected during:
+                instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator==(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+    (61): here
+                instantiation of "__nv_bool c10::detail::integer_iterator<I, one_sided, <unnamed>>::operator!=(const c10::detail::integer_iterator<I, one_sided, <unnamed>> &) const [with I=std::size_t, one_sided=true, <unnamed>=0]"
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/qualified_name.h(73): here
+
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu: In function ‘std::tuple<int, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, int, int, const at::Tensor&, int, const at::Tensor&, bool, bool)’:
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:70:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       70 |   CHECK_INPUT(background);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:71:64: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       71 |   CHECK_INPUT(means3D);
+          |                                                                ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:72:63: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       72 |   CHECK_INPUT(colors);
+          |                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:73:64: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       73 |   CHECK_INPUT(opacity);
+          |                                                                ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:74:63: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       74 |   CHECK_INPUT(scales);
+          |                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:75:66: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       75 |   CHECK_INPUT(rotations);
+          |                                                                  ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:76:73: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       76 |   CHECK_INPUT(transMat_precomp);
+          |                                                                         ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:77:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       77 |   CHECK_INPUT(viewmatrix);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:78:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       78 |   CHECK_INPUT(projmatrix);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:79:59: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       79 |   CHECK_INPUT(sh);
+          |                                                           ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:80:63: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+       80 |   CHECK_INPUT(campos);
+          |                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:134: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                      ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:180: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                    ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:258: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                  ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:298: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                          ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:452: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:495: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:538: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:577: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:652: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:695: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:107:731: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      107 |    rendered = CudaRasterizer::Rasterizer::forward(
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu: In function ‘std::tuple<at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor, at::Tensor> RasterizeGaussiansBackwardCUDA(const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, float, float, const at::Tensor&, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, int, const at::Tensor&, const at::Tensor&, bool)’:
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:162:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      162 |   CHECK_INPUT(background);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:163:64: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      163 |   CHECK_INPUT(means3D);
+          |                                                                ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:164:62: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      164 |   CHECK_INPUT(radii);
+          |                                                              ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:165:63: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      165 |   CHECK_INPUT(colors);
+          |                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:166:63: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      166 |   CHECK_INPUT(scales);
+          |                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:167:66: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      167 |   CHECK_INPUT(rotations);
+          |                                                                  ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:168:73: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      168 |   CHECK_INPUT(transMat_precomp);
+          |                                                                         ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:169:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      169 |   CHECK_INPUT(viewmatrix);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:170:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      170 |   CHECK_INPUT(projmatrix);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:171:59: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      171 |   CHECK_INPUT(sh);
+          |                                                           ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:172:63: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      172 |   CHECK_INPUT(campos);
+          |                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:173:70: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      173 |   CHECK_INPUT(binningBuffer);
+          |                                                                      ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:174:68: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      174 |   CHECK_INPUT(imageBuffer);
+          |                                                                    ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:175:67: warning: ‘at::DeprecatedTypeProperties& at::Tensor::type() const’ is deprecated: Tensor.type() is deprecated. Instead use Tensor.options(), which in many cases (e.g. in a constructor) is a drop-in replacement. If you were using data from type(), that is now available from Tensor itself, so instead of tensor.type().scalar_type(), use tensor.scalar_type() instead and instead of tensor.type().backend() use tensor.device(). [-Wdeprecated-declarations]
+      175 |   CHECK_INPUT(geomBuffer);
+          |                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:222:1: note: declared here
+      222 |   DeprecatedTypeProperties & type() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:95: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:141: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                             ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:176: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:215: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                       ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:339: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:382: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                              ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:425: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:464: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:520: warning: ‘T* at::Tensor::data() const [with T = int]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:765: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:812: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:856: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:899: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:943: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:986: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:1030: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:1075: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:1114: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:1157: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:199:1203: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      199 |    CudaRasterizer::Rasterizer::backward(P, degree, M, R,
+          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu: In function ‘at::Tensor markVisible(at::Tensor&, at::Tensor&, at::Tensor&)’:
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:246:81: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      246 |  CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                 ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:246:124: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      246 |  CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                                                            ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:246:167: warning: ‘T* at::Tensor::data() const [with T = float]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      246 |  CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                                                                                                       ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/rasterize_points.cu:246:206: warning: ‘T* at::Tensor::data() const [with T = bool]’ is deprecated: Tensor.data<T>() is deprecated. Please use Tensor.data_ptr<T>() instead. [-Wdeprecated-declarations]
+      246 |  CudaRasterizer::Rasterizer::markVisible(P,
+          |                                                                                                                                                                                                              ^
+    /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:244:1: note: declared here
+      244 |   T * data() const {
+          | ^ ~~
+    creating build/lib.linux-x86_64-cpython-38/diff_surfel_rasterization
+    /usr/bin/g++-9 -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -pthread -shared -B /opt/anaconda3/envs/surfel_splatting/compiler_compat -L/opt/anaconda3/envs/surfel_splatting/lib -Wl,-rpath=/opt/anaconda3/envs/surfel_splatting/lib -Wl,--no-as-needed -Wl,--sysroot=/ /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/backward.o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/ext.o /home/easyai/2dgs-final/submodules/diff-surfel-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o -L/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torch/lib -L/opt/anaconda3/envs/surfel_splatting/lib -lc10 -ltorch -ltorch_cpu -ltorch_python -lcudart -lc10_cuda -ltorch_cuda -o build/lib.linux-x86_64-cpython-38/diff_surfel_rasterization/_C.cpython-38-x86_64-linux-gnu.so
+    copying build/lib.linux-x86_64-cpython-38/diff_surfel_rasterization/_C.cpython-38-x86_64-linux-gnu.so -> diff_surfel_rasterization
+    Creating /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/diff-surfel-rasterization.egg-link (link to .)
+    Adding diff-surfel-rasterization 0.0.1 to easy-install.pth file
+
+    Installed /home/easyai/2dgs-final/submodules/diff-surfel-rasterization
+Successfully installed diff_surfel_rasterization
