@@ -1,0 +1,8 @@
+/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /opt/anaconda3/envs/surfel_splatting/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+{'method': 'ablation_stop5000', 'scene': 'scan105', 'iteration': 10000, 'split': 'train', 'num_images': 64, 'psnr': 34.053621801587624, 'ssim': 0.9191694259643555, 'lpips': 0.27435208251699805}
+saved results/package/metrics/ablation_stop5000_scan105_metrics.json and results/package/metrics/ablation_stop5000_scan105_metrics.csv

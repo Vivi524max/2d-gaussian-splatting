@@ -1,0 +1,2 @@
+method,scene,iteration,split,num_images,psnr,ssim,lpips
+ablation_stop5000,scan105,10000,train,64,34.053622,0.919169,0.274352

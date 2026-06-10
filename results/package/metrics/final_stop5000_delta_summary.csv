@@ -1,0 +1,3 @@
+scene,baseline_psnr,final_psnr,delta_psnr,baseline_ssim,final_ssim,delta_ssim,baseline_lpips,final_lpips,delta_lpips
+scan105,33.732391,34.053622,0.321231,0.916614,0.919169,0.002555,0.278894,0.274352,-0.004542
+scan24,32.289862,32.664114,0.374252,0.941775,0.944202,0.002427,0.131309,0.127627,-0.003682

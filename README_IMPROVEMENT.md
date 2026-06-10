@@ -123,3 +123,17 @@ All experiments use DTU scan24 and scan105 with 10000 training iterations. Metri
 
 The improved late-stage opacity reset suppression strategy slightly improves SSIM and LPIPS on both scenes. PSNR improves on scan105 but slightly decreases on scan24, indicating that the method improves overall perceptual and structural stability but is still scene-dependent.
 
+
+
+## Final Ablation Result
+
+The opacity reset stop iteration was further tested on DTU scan105 and scan24. Compared with the original stop_iter=7000 setting, stop_iter=5000 achieved better results. Therefore, the final improved method uses --adaptive_opacity_reset --opacity_reset_stop_iter 5000.
+
+| Method | Scene | PSNR | SSIM | LPIPS |
+|---|---|---:|---:|---:|
+| Baseline | scan24 | 32.289862 | 0.941775 | 0.131309 |
+| Final stop5000 | scan24 | 32.664114 | 0.944202 | 0.127627 |
+| Baseline | scan105 | 33.732391 | 0.916614 | 0.278894 |
+| Final stop5000 | scan105 | 34.053622 | 0.919169 | 0.274352 |
+
+The final stop5000 strategy improves PSNR and SSIM on both scenes and reduces LPIPS on both scenes, showing that earlier suppression of opacity reset can reduce late-stage disturbance and improve rendering stability.
