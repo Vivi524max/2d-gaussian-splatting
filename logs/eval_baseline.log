@@ -1,0 +1,5 @@
+bash: /opt/anaconda3/envs/surfel_splatting/lib/libtinfo.so.6: no version information available (required by bash)
+Scene: output/baseline/scan24
+Unable to compute metrics for model output/baseline/scan24
+Scene: output/baseline/scan105
+Unable to compute metrics for model output/baseline/scan105

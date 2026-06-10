@@ -1,0 +1,2 @@
+method,scene,iteration,split,num_images,psnr,ssim,lpips
+baseline,scan24,10000,train,49,32.289862,0.941775,0.131309
