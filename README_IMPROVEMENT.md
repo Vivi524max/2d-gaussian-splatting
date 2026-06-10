@@ -151,3 +151,13 @@ The second identified limitation is that geometry regularization terms are activ
 | Progressive Geo | scan105 | 33.640359 | 0.916722 | 0.280186 |
 
 The hypothesis is only partially supported. The method slightly improves all metrics on scan24, but on scan105 it decreases PSNR and worsens LPIPS while only slightly improving SSIM. This suggests that progressive geometry regularization is scene-dependent and may weaken late-stage geometric constraints when the training budget is limited to 10000 iterations.
+
+
+## Efficiency Metrics
+
+Efficiency metrics are saved in , including training time, nvidia-smi memory snapshot, output size, and rendering FPS. The baseline scan105 training-time entry is marked as NA because the corresponding terminal log was incomplete; other entries are parsed from complete training and rendering logs.
+
+
+## Efficiency Metrics
+
+Efficiency metrics are saved in , including training time, nvidia-smi memory snapshot, output size, and rendering FPS. The baseline scan105 training-time entry is marked as NA because the corresponding terminal log was incomplete; other entries are parsed from complete training and rendering logs.

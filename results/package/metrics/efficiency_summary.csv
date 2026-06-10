@@ -1,7 +1,7 @@
 method,scene,train_time_sec,train_time_min,nvidia_smi_snapshot_max_mib,output_size_mb,render_fps_it_per_sec
-baseline,scan24,355,5.92,504,1106.16,
-baseline,scan105,10,0.17,504,723.39,
-opacity_stop5000,scan24,352,5.87,555,1200.71,
-opacity_stop5000,scan105,297,4.95,555,743.88,
-progressive_geo,scan24,357,5.95,555,1109.39,
-progressive_geo,scan105,299,4.98,555,688.19,
+baseline,scan24,355,5.92,504,1106.16,3.53
+baseline,scan105,NA,NA,504,723.39,3.28
+opacity_stop5000,scan24,352,5.87,555,1200.71,3.2
+opacity_stop5000,scan105,297,4.95,555,743.88,1.58
+progressive_geo,scan24,357,5.95,555,1109.39,3.18
+progressive_geo,scan105,299,4.98,555,688.19,3.04
