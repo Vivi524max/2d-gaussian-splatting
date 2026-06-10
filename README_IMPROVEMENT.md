@@ -79,3 +79,22 @@ Rendered PNG results and raw metrics for the final ZIP package will be stored un
 ## Baseline Iteration Setting
 
 For the one-day course experiment schedule, baseline reproduction uses 10000 iterations with saved checkpoints at 3000, 5000, 8000, and 10000 iterations. The same setting will be used for the improved version to ensure fair comparison.
+
+## Improvement Method: Late-stage Opacity Reset Suppression
+
+
+
+The baseline 2DGS training periodically resets Gaussian opacity during densification. This is useful in the early stage, but repeated opacity reset in the late stage may disturb already stable Gaussian opacity, color, and geometry. Therefore, this improvement keeps the original opacity reset strategy in the early stage and disables opacity reset after 7000 iterations.
+
+
+
+Improved training command for scan24:
+
+python train.py -s $HOME/data/2dgs/DTU/scan24 -m output/improved/scan24 -r 2 --depth_ratio 1 --iterations 10000 --save_iterations 3000 5000 8000 10000 --checkpoint_iterations 3000 5000 8000 10000 --adaptive_opacity_reset --opacity_reset_stop_iter 7000
+
+
+
+Improved training command for scan105:
+
+python train.py -s $HOME/data/2dgs/DTU/scan105 -m output/improved/scan105 -r 2 --depth_ratio 1 --iterations 10000 --save_iterations 3000 5000 8000 10000 --checkpoint_iterations 3000 5000 8000 10000 --adaptive_opacity_reset --opacity_reset_stop_iter 7000
+
