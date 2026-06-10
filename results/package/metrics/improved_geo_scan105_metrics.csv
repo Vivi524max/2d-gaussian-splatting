@@ -1,0 +1,2 @@
+method,scene,iteration,split,num_images,psnr,ssim,lpips
+improved_geo,scan105,10000,train,64,33.640359,0.916722,0.280186

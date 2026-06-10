@@ -137,3 +137,17 @@ The opacity reset stop iteration was further tested on DTU scan105 and scan24. C
 | Final stop5000 | scan105 | 34.053622 | 0.919169 | 0.274352 |
 
 The final stop5000 strategy improves PSNR and SSIM on both scenes and reduces LPIPS on both scenes, showing that earlier suppression of opacity reset can reduce late-stage disturbance and improve rendering stability.
+
+
+## Improvement 2: Progressive Geometry Regularization
+
+The second identified limitation is that geometry regularization terms are activated by hard iteration thresholds. This may introduce an abrupt optimization objective change. To test this limitation, a progressive ramp-up strategy was implemented for distortion and normal regularization. Distortion regularization is gradually increased from iteration 3000, and normal regularization is gradually increased from iteration 7000.
+
+| Method | Scene | PSNR | SSIM | LPIPS |
+|---|---|---:|---:|---:|
+| Baseline | scan24 | 32.289862 | 0.941775 | 0.131309 |
+| Progressive Geo | scan24 | 32.334978 | 0.941994 | 0.130860 |
+| Baseline | scan105 | 33.732391 | 0.916614 | 0.278894 |
+| Progressive Geo | scan105 | 33.640359 | 0.916722 | 0.280186 |
+
+The hypothesis is only partially supported. The method slightly improves all metrics on scan24, but on scan105 it decreases PSNR and worsens LPIPS while only slightly improving SSIM. This suggests that progressive geometry regularization is scene-dependent and may weaken late-stage geometric constraints when the training budget is limited to 10000 iterations.
