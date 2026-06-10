@@ -98,3 +98,28 @@ Improved training command for scan105:
 
 python train.py -s $HOME/data/2dgs/DTU/scan105 -m output/improved/scan105 -r 2 --depth_ratio 1 --iterations 10000 --save_iterations 3000 5000 8000 10000 --checkpoint_iterations 3000 5000 8000 10000 --adaptive_opacity_reset --opacity_reset_stop_iter 7000
 
+
+## Experimental Results
+
+
+
+All experiments use DTU scan24 and scan105 with 10000 training iterations. Metrics are computed on the train split using rendered images and ground-truth images under `train/ours_10000`.
+
+
+
+| Method | Scene | PSNR | SSIM | LPIPS |
+
+|---|---|---:|---:|---:|
+
+| Baseline | scan24 | 32.289862 | 0.941775 | 0.131309 |
+
+| Improved | scan24 | 32.261173 | 0.942483 | 0.128960 |
+
+| Baseline | scan105 | 33.732391 | 0.916614 | 0.278894 |
+
+| Improved | scan105 | 33.926934 | 0.918174 | 0.276408 |
+
+
+
+The improved late-stage opacity reset suppression strategy slightly improves SSIM and LPIPS on both scenes. PSNR improves on scan105 but slightly decreases on scan24, indicating that the method improves overall perceptual and structural stability but is still scene-dependent.
+
