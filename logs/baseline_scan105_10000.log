@@ -1,0 +1,37 @@
+bash: /opt/anaconda3/envs/surfel_splatting/lib/libtinfo.so.6: no version information available (required by bash)
+Wed Jun 10 08:32:28 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.05              Driver Version: 560.35.05      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3080 Ti     Off |   00000000:03:00.0  On |                  N/A |
+| 42%   52C    P8             28W /  350W |     504MiB /  12288MiB |      8%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A      1214      G   /usr/lib/xorg/Xorg                            280MiB |
+|    0   N/A  N/A      1475      G   /usr/bin/gnome-shell                           29MiB |
+|    0   N/A  N/A      1503      G   /opt/teamviewer/tv_bin/TeamViewer               3MiB |
+|    0   N/A  N/A      2239      G   /usr/local/sunlogin/bin/sunloginclient         16MiB |
+|    0   N/A  N/A      2245      G   ...) Chrome/58.0.3029.81 Safari/537.36          4MiB |
+|    0   N/A  N/A      2267      G   ...en=AF5216321145AC24A9D294537B58A257          3MiB |
+|    0   N/A  N/A    127009      G   ...AAAAAAAIAAAAAAAAAA== --shared-files         25MiB |
+|    0   N/A  N/A   1243879      G   gnome-control-center                            4MiB |
+|    0   N/A  N/A   1248066      G   ...n=20260609-010038.267000-production         87MiB |
++-----------------------------------------------------------------------------------------+
+Optimizing output/baseline/scan105
+Output folder: output/baseline/scan105 [10/06 08:32:33]
+Tensorboard not available: not logging progress [10/06 08:32:33]
+Reading camera 1/64Reading camera 2/64Reading camera 3/64Reading camera 4/64Reading camera 5/64Reading camera 6/64Reading camera 7/64Reading camera 8/64Reading camera 9/64Reading camera 10/64Reading camera 11/64Reading camera 12/64Reading camera 13/64Reading camera 14/64Reading camera 15/64Reading camera 16/64Reading camera 17/64Reading camera 18/64Reading camera 19/64Reading camera 20/64Reading camera 21/64Reading camera 22/64Reading camera 23/64Reading camera 24/64Reading camera 25/64Reading camera 26/64Reading camera 27/64Reading camera 28/64Reading camera 29/64Reading camera 30/64Reading camera 31/64Reading camera 32/64Reading camera 33/64Reading camera 34/64Reading camera 35/64Reading camera 36/64Reading camera 37/64Reading camera 38/64Reading camera 39/64Reading camera 40/64Reading camera 41/64Reading camera 42/64Reading camera 43/64Reading camera 44/64Reading camera 45/64Reading camera 46/64Reading camera 47/64Reading camera 48/64Reading camera 49/64Reading camera 50/64Reading camera 51/64Reading camera 52/64Reading camera 53/64Reading camera 54/64Reading camera 55/64Reading camera 56/64Reading camera 57/64Reading camera 58/64Reading camera 59/64Reading camera 60/64Reading camera 61/64Reading camera 62/64Reading camera 63/64Reading camera 64/64 [10/06 08:32:33]
+Loading Training Cameras [10/06 08:32:33]
+Loading Test Cameras [10/06 08:32:43]
+Number of points at initialisation :  44317 [10/06 08:32:43]
+Training progress:   0%|          | 0/10000 [00:00<?, ?it/s]
