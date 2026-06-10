@@ -28,7 +28,7 @@ try:
 except ImportError:
     TENSORBOARD_FOUND = False
 
-def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoint_iterations, checkpoint, adaptive_opacity_reset=False, opacity_reset_stop_iter=7000):
+def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoint_iterations, checkpoint, adaptive_opacity_reset=False, opacity_reset_stop_iter=7000, progressive_geo_reg=False, dist_ramp_start=3000, normal_ramp_start=7000, geo_ramp_length=2000):
     first_iter = 0
     tb_writer = prepare_output_and_logger(dataset)
     gaussians = GaussianModel(dataset.sh_degree)
@@ -74,8 +74,14 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
         loss = (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * (1.0 - ssim(image, gt_image))
         
         # regularization
-        lambda_normal = opt.lambda_normal if iteration > 7000 else 0.0
-        lambda_dist = opt.lambda_dist if iteration > 3000 else 0.0
+        if progressive_geo_reg:
+            dist_ratio = min(max((iteration - dist_ramp_start) / float(geo_ramp_length), 0.0), 1.0)
+            normal_ratio = min(max((iteration - normal_ramp_start) / float(geo_ramp_length), 0.0), 1.0)
+            lambda_dist = opt.lambda_dist * dist_ratio
+            lambda_normal = opt.lambda_normal * normal_ratio
+        else:
+            lambda_normal = opt.lambda_normal if iteration > 7000 else 0.0
+            lambda_dist = opt.lambda_dist if iteration > 3000 else 0.0
 
         rend_dist = render_pkg["rend_dist"]
         rend_normal  = render_pkg['rend_normal']
@@ -268,6 +274,10 @@ if __name__ == "__main__":
     parser.add_argument("--start_checkpoint", type=str, default = None)
     parser.add_argument("--adaptive_opacity_reset", action="store_true", default=False)
     parser.add_argument("--opacity_reset_stop_iter", type=int, default=7000)
+    parser.add_argument("--progressive_geo_reg", action="store_true", default=False)
+    parser.add_argument("--dist_ramp_start", type=int, default=3000)
+    parser.add_argument("--normal_ramp_start", type=int, default=7000)
+    parser.add_argument("--geo_ramp_length", type=int, default=2000)
     args = parser.parse_args(sys.argv[1:])
     args.save_iterations.append(args.iterations)
     
@@ -279,7 +289,7 @@ if __name__ == "__main__":
     # Start GUI server, configure and run training
     network_gui.init(args.ip, args.port)
     torch.autograd.set_detect_anomaly(args.detect_anomaly)
-    training(lp.extract(args), op.extract(args), pp.extract(args), args.test_iterations, args.save_iterations, args.checkpoint_iterations, args.start_checkpoint, args.adaptive_opacity_reset, args.opacity_reset_stop_iter)
+    training(lp.extract(args), op.extract(args), pp.extract(args), args.test_iterations, args.save_iterations, args.checkpoint_iterations, args.start_checkpoint, args.adaptive_opacity_reset, args.opacity_reset_stop_iter, args.progressive_geo_reg, args.dist_ramp_start, args.normal_ramp_start, args.geo_ramp_length)
 
     # All done
     print("\nTraining complete.")
